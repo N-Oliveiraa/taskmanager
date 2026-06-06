@@ -1,0 +1,232 @@
+.root {
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-background-color: #d3d3d3;
+}
+
+.title {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 48px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.container-cadastro {
+    -fx-padding: 90 0 0 0;
+}
+
+.container-campo {
+    -fx-max-width:800;
+    -fx-spacing: 5;
+}
+
+.btn-criar-atividade,
+.btn-salvar,
+.btn-editar,
+.btn-excluir,
+.btn-cancelar {
+    -fx-pref-height: 38;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-cursor: hand; 
+    -fx-padding: 0 16 0 16; 
+}
+
+.btn-criar-atividade {
+    -fx-font-size: 14px;
+    -fx-min-width: 150;
+    -fx-background-color: #27ae60;
+    -fx-padding: 22;
+}
+
+.btn-salvar {
+    -fx-min-width: 80;
+    -fx-background-color: #27ae60;
+}
+
+.btn-editar {
+    -fx-min-width: 80;
+    -fx-background-color: #E89545;
+}
+
+.btn-excluir {
+    -fx-min-width: 80;
+    -fx-background-color: #D85C3F;
+}
+
+.btn-cancelar {
+    -fx-min-width: 80;
+    -fx-background-color: #3498db;
+}
+
+.botoes-cadastro {
+    -fx-padding: 16 0 0 0;
+}
+
+.btn-criar-atividade:hover,
+.btn-salvar:hover {
+    -fx-background-color: #219150;
+}
+
+.btn-editar:hover {
+    -fx-background-color:#D9822B;
+}
+
+.btn-editar:pressed {
+    -fx-background-color: #D9822B;
+}
+
+.btn-excluir:hover {
+    -fx-background-color:#C94A2D;
+}
+
+.btn-excluir:pressed {
+    -fx-background-color: #C94A2D;
+}
+
+.btn-cancelar:hover {
+    -fx-background-color: #2980b9;
+}
+
+.task-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 8 15 8 15;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.06), 10, 0, 0, 2);
+}
+
+.task-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+.task-desc {
+    -fx-font-size: 14px;
+    -fx-text-fill: #64748b;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 3;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #27ae60;
+    -fx-border-color: #27ae60;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.list-card {
+    -fx-translate-y: 50;
+    -fx-max-width: 1080;
+    -fx-min-height: 850; 
+    -fx-background-color:white;
+    -fx-background-radius: 16;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 16;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 12, 0, 0, 3);
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+   
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1;
+    -fx-padding: 10;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+.text-area:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+}
+
+.status-card {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-min-width: 120;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 10;
+}
+
+.status-contador {
+    -fx-background-color: #f8fafc;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.combo-box {
+    -fx-border-color: #bfc5cc;
+    -fx-border-width: 1;
+    -fx-background-color: #f8fafc;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+
+}
+
+.combo-box:hover {
+    -fx-border-color: #aaaaaa; 
+    -fx-cursor: hand;
+}
+
+/* Quando recebe foco */
+.combo-box:focused {
+    -fx-focus-color: #9ca3af;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Lista aberta */
+.combo-box .list-cell {
+    -fx-background-color: #f8fafc;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Item com mouse em cima */
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: black;
+}
+
+/* Item selecionado */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #c1c1c1;
+    -fx-text-fill: black;
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/26" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    alignment="TOP_CENTER" 
+    maxWidth="950.0" 
+    prefHeight="943.0" 
+    prefWidth="950.0" 
+    spacing="18" 
+    styleClass="container" 
+    stylesheets="@estilos.css" 
+    fx:controller="com.mycompany.taskmanager.controller.TelaListagemController">
+    <VBox 
+        maxWidth="Infinity" 
+        minHeight="811.0" 
+        prefHeight="811.0" 
+        prefWidth="924.0" 
+        spacing="18" 
+        styleClass="list-card">
+  
+        <HBox 
+            alignment="CENTER" 
+            maxWidth="Infinity" 
+            spacing="10" 
+            style="-fx-padding: 10 0 10 0;">
+
+            <Label 
+                styleClass="title" 
+                text="Lista de Atividades"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button 
+                onAction="#irParaCadastro" 
+                styleClass="btn-criar-atividade" 
+                text="➕ Criar Atividade"/>
+        </HBox>
+ 
+        <HBox spacing="20" alignment="CENTER">
+
+            <VBox alignment="CENTER" styleClass="status-card">
+                <Label text="Total"/>
+                <Label fx:id="totalLabel" text="0" styleClass="status-contador"/>
+            </VBox>
+
+            <VBox alignment="CENTER" styleClass="status-card">
+                <Label text="Pendentes"/>
+                <Label fx:id="pendentesLabel" text="0" styleClass="status-contador"/>
+            </VBox>
+
+            <VBox alignment="CENTER" styleClass="status-card">
+                <Label text="Concluídas"/>
+                <Label fx:id="concluidasLabel" text="0" styleClass="status-contador"/>
+            </VBox>
+
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" spacing="15">
+        
+            <ComboBox
+                fx:id="comboFiltro"
+                promptText="Filtrar tarefas"
+                onAction="#filtrarTarefas"
+                prefWidth="180"
+                translateX="-8"/>
+        </HBox>
+        
+        <ScrollPane
+            fitToWidth="true"
+            hbarPolicy="NEVER"
+            vbarPolicy="AS_NEEDED"
+            prefHeight="650"
+            styleClass="scroll-pane">
+        
+            <content>        
+                <VBox 
+                    fx:id="containerTasks" 
+                    alignment="TOP_CENTER" 
+                    maxWidth="Infinity" 
+                    spacing="13"/>
+            </content>     
+        </ScrollPane>
+    </VBox>
+</VBox>

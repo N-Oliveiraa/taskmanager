@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox 
+    xmlns:fx="http://javafx.com/fxml/1"
+    xmlns="http://javafx.com/javafx/21"
+    spacing="18"
+    alignment="CENTER_LEFT"
+    maxWidth="Infinity"
+    fx:controller="com.mycompany.taskmanager.controller.TaskCardController"
+    fx:id="taskCard"
+    stylesheets="@estilos.css"
+    style="-fx-background-color: #EEEEEE; -fx-background-radius: 10; -fx-padding:10;"
+>
+    <VBox spacing="5">
+        <Label fx:id="tituloLabel"
+            wrapText="true"
+            maxWidth="600"
+            style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        
+        <Label fx:id="descricaoLabel"
+            styleClass="task-desc"
+            wrapText="true"
+            maxWidth="600"/>       
+    </VBox>
+    
+    <Region HBox.hgrow="ALWAYS" />
+    
+    <CheckBox fx:id="checkBoxTask" onAction="#alterarStatusTask"/>
+    
+    <Button 
+        text="Editar" 
+        onAction="#editarTask" 
+        styleClass="btn-editar"/>
+    
+    <Button 
+        text="Excluir"
+        onAction="#excluirTask"
+        styleClass="btn-excluir"/>
+</HBox>
+ 
